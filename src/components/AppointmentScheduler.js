@@ -43,7 +43,7 @@ function AppointmentScheduler() {
       const slotButton = container.querySelector(".date-button");
 
       if (slotButton) {
-        const slotWidth = slotButton.offsetWidth + 10; // Adding gap between buttons
+        const slotWidth = slotButton.offsetWidth + 10;
         const newScrollLeft = Math.max(container.scrollLeft - slotWidth, 0);
 
         container.scrollTo({
@@ -51,7 +51,7 @@ function AppointmentScheduler() {
           behavior: "smooth",
         });
 
-        setTimeout(updateButtonStates, 300); // Update button states after scrolling
+        setTimeout(updateButtonStates, 300);
       }
     }
   };
@@ -62,7 +62,7 @@ function AppointmentScheduler() {
       const slotButton = container.querySelector(".date-button");
 
       if (slotButton) {
-        const slotWidth = slotButton.offsetWidth + 10; // Adding gap between buttons
+        const slotWidth = slotButton.offsetWidth + 10;
         const newScrollLeft = Math.min(
           container.scrollLeft + slotWidth,
           container.scrollWidth - container.clientWidth
@@ -73,7 +73,7 @@ function AppointmentScheduler() {
           behavior: "smooth",
         });
 
-        setTimeout(updateButtonStates, 300); // Update button states after scrolling
+        setTimeout(updateButtonStates, 300);
       }
     }
   };
