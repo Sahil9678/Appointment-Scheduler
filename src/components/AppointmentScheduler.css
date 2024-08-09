@@ -1,0 +1,166 @@
+/* AppointmentScheduler.css */
+
+.appointment-scheduler {
+  background-color: #f7f3ec;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.date-picker-slots {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  gap: 10px;
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.date-picker-slots::-webkit-scrollbar {
+  height: 8px;
+}
+
+.date-picker-slots::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.date-picker-slots::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.date-picker-slots::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
+
+.date-picker-slots::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.date-button {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+  min-width: 60px;
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+.date-button.selected {
+  background-color: #d4e4f4;
+  color: #333;
+}
+
+.nav-button {
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+
+.nav-button:hover {
+  background-color: #ccc;
+  opacity: 1;
+}
+
+.nav-button:disabled {
+  background-color: #f7f3ec;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.carousel-btn{
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-btn:hover {
+  background-color: #ccc;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.carousel-btn:disabled {
+  background-color: #f7f3ec;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.time-slot {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+  min-width: 70px;
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.time-slot.selected {
+  background-color: #d4e4f4;
+  color: #333;
+}
+
+/* For responsiveness */
+@media (max-width: 400px) {
+  .date-button {
+    width: 50px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .time-slot {
+    padding: 8px 10px;
+    min-width: 60px;
+    font-size: 0.9rem;
+  }
+
+  .nav-button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+}
+
